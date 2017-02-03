@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import { financials } from './data.js'
+
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = { data: {} }
+  }
+  componentDidMount() {
+    this.setState({ data: financials })
+  }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='appContainer'>
+        <header className='headerContainer'>
+          <img src={'/assets/img/yewno.png'} className='logo' alt='yewno logo' />
+        </header>
+        {/* { this.state.data.map(item => <h1>{item.title}</h1>)} */}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
