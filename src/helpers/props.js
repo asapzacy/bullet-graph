@@ -20,3 +20,14 @@ export const actualValueProps = (width, max, height, fill) => {
     fill
   }
 }
+
+export const targetValueProps = (width, max, height, fill) => {
+  const targetHeight = height * .7
+  return {
+    x: getBarWidth(width, max),
+    y: (height - targetHeight) / 2,
+    width: 5,
+    height: targetHeight,
+    fill
+  }
+}

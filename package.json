@@ -1,5 +1,6 @@
 {
-  "name": "yewno",
+  "name": "bullet-graph",
+  "description": "build a bullet-graph using React.js",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

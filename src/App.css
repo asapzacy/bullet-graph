@@ -1,8 +1,10 @@
 
 /* -------  app container  ------- */
 .appContainer {
-  width:100%;
+  width:96%;
   height:100%;
+  max-width:1444px;
+  margin:0 auto;
   display:flex;
   align-items:center;
   flex-direction:column;
@@ -11,7 +13,7 @@
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
-  height:12em;
+  flex-basis:25%;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -24,8 +26,8 @@
 
 /* -------  bullets list  ------- */
 .bulletList {
-  width:96%;
-  height:50%;
+  width:100%;
+  flex-basis:50%;
   display:flex;
   flex-direction:column;
   justify-content:space-around;
@@ -41,7 +43,8 @@
 
 /* -------  title container  ------- */
 .titleContainer {
-  flex-basis:17.5%;
+  flex-basis:14%;
+  min-width:160px;
   text-align:right;
 }
 .title {
@@ -53,5 +56,26 @@
 }
 
 .graphContainer {
-  flex-basis:77.5%;
+  flex-basis:82%;
+}
+
+/* -------  color menu  ------- */
+.colorMenu {
+  width:100%;
+  flex-basis:25%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* -------  color list  ------- */
+.colorList {
+  display:flex;
+}
+/* -------  color item  ------- */
+.colorItem {
+  padding:0 2em;
+  cursor:pointer;
+}
+.colorItem:not(:last-child) {
+  border-right:1px solid #070707;
 }
