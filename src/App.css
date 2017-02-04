@@ -11,15 +11,15 @@
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
-  margin:2% 0 8%;
+  height:12em;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-/* -------  logo  ------- */
-.logo {
-  width:50%;
-  max-width:420px;
+/* -------  header  ------- */
+.header {
+  font-family:monospace;
+  font-size:3.33em;
 }
 
 /* -------  bullets list  ------- */
@@ -54,5 +54,4 @@
 
 .graphContainer {
   flex-basis:77.5%;
-  background:black;
 }
