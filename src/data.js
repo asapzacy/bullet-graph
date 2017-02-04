@@ -1,6 +1,7 @@
 
 export const financials = [
   {
+    id: 1,
     title: 'Revenue',
     subtitle: 'U.S. $(1,000s)',
     targetValue: 250,
@@ -12,6 +13,7 @@ export const financials = [
     percentage: false
   },
   {
+    id: 2,
     title: 'Profit',
     subtitle: '%',
     targetValue: 27,
@@ -23,7 +25,8 @@ export const financials = [
     percentage: true
   },
   {
-    title: 'Average Order Size',
+    id: 3,
+    title: 'Avg. Order Size',
     subtitle: 'U.S. $',
     targetValue: 550,
     actualValue: 325,
@@ -34,6 +37,7 @@ export const financials = [
     percentage: false
   },
   {
+    id: 4,
     title: 'New Customers',
     subtitle: 'Count',
     targetValue: 2100,
@@ -43,8 +47,10 @@ export const financials = [
     poor: 1400,
     stops: 6,
     percentage: false
-  },{
-    title: 'Customer Satisfaction',
+  },
+  {
+    id: 5,
+    title: 'Cust. Satisfaction',
     subtitle: 'Top Rating of 5',
     targetValue: 4.2,
     actualValue: 3.5,

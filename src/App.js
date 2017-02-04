@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Bullet from './Bullet'
 import './App.css'
 import { financials } from './data.js'
 
@@ -6,7 +7,7 @@ import { financials } from './data.js'
 class App extends Component {
   constructor() {
     super()
-    this.state = { data: {} }
+    this.state = { data: [] }
   }
   componentDidMount() {
     this.setState({ data: financials })
@@ -15,9 +16,11 @@ class App extends Component {
     return (
       <div className='appContainer'>
         <header className='headerContainer'>
-          <img src={'/assets/img/yewno.png'} className='logo' alt='yewno logo' />
+          <img src='/assets/img/yewno.png' className='logo' alt='yewno logo' />
         </header>
-        {/* { this.state.data.map(item => <h1>{item.title}</h1>)} */}
+        <ul className='bulletList'>
+          { this.state.data.map(item => <Bullet {...item} key={item.id} />) }
+        </ul>
       </div>
     )
   }
