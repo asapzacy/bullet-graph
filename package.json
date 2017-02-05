@@ -15,5 +15,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacarellano/bullet-graph.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zacarellano/bullet-graph/issues"
+  },
+  "homepage": "."
 }
