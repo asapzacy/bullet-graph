@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
-import Bullet from './components/Bullet'
-import ColorMenu from './components/ColorMenu'
-import { financials } from './helpers/data.js'
-import { colors } from './helpers/fills.js'
-import './styles/main.css'
+import Header from '../components/Header'
+import Bullet from '../components/Bullet'
+import ColorMenu from '../components/ColorMenu'
+import { financials } from '../helpers/data.js'
+import { colors } from '../helpers/fills.js'
+import '../styles/main.css'
 
-class App extends Component {
+class AppContainer extends Component {
   constructor() {
     super()
     this.state = {
@@ -50,4 +50,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default AppContainer

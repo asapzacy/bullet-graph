@@ -1,6 +1,5 @@
 import React from 'react'
 import Interval from './Interval'
-import { intervalProps } from '../helpers/props'
 
 export default function Axis({ height, width, steps, percentage }) {
   const intervals = () => {
