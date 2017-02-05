@@ -1,7 +1,8 @@
 import React from 'react'
 import Tick from './Tick'
+import { tickProps } from '../helpers/props'
 
-export default function Axis({ height, width, steps }) {
+export default function Axis({ height, width, steps, percentage }) {
   const arr = []
   const division = width / (steps - 1)
   let i = 0
@@ -9,14 +10,9 @@ export default function Axis({ height, width, steps }) {
     arr.push(i)
     i += division
   }
-  console.log(arr)
   return (
     <g>
-
-      <g>
-        <line x1='1' y1='50' x2='1' y2='60' strokeWidth={2} stroke='black'></line>
-        <text x="0" y="75" textAnchor='middle'>0</text>
-        </g>
+      { arr.map((item, index) => <Tick {...tickProps(width, height, index, item, arr.length - 1, percentage)} key={index} />) }
     </g>
   )
 }

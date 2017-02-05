@@ -33,8 +33,17 @@ export const targetValueProps = (width, maxWidth, maxHeight, fill) => {
   }
 }
 
-export const tickProps = (x, y, height) => {
+export const tickProps = (width, height, index, step, last, percentage) => {
+  const x = getX(step, width)
   return {
-    
+    x1: x,
+    y1: height,
+    x2: x,
+    y2: height + 15,
+    x3: x,
+    y3: height + 35,
+    text: step.toLocaleString(),
+    position: 'middle',
+    percentage
   }
 }

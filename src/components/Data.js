@@ -1,6 +1,6 @@
 import React from 'react'
 import Bar from './Bar'
-import { quartileProps, actualValueProps, targetValueProps } from '../helpers/props.js'
+import { quartileProps, actualValueProps, targetValueProps } from '../helpers/props'
 
 export default function Data({ good, average, poor, actual, target, height, fills }) {
   return (
