@@ -36,7 +36,6 @@
 
 /* -------  bullet container  ------- */
 .bulletItem {
-  height:50px;
   display:flex;
   justify-content:space-between;
 }
@@ -55,8 +54,17 @@
   font-size:1em;
 }
 
+/* -------  graph container  ------- */
 .graphContainer {
   flex-basis:82%;
+}
+/* -------  graph  ------- */
+.graph {
+  overflow:visible;
+}
+/* -------  graph bar  ------- */
+.bar {
+  transition:fill 0.44s;
 }
 
 /* -------  color menu  ------- */
@@ -75,6 +83,7 @@
 .colorItem {
   padding:0 2em;
   cursor:pointer;
+  transition:color 0.44s;
 }
 .colorItem:not(:last-child) {
   border-right:1px solid #070707;

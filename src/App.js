@@ -20,21 +20,17 @@ class App extends Component {
      this.switchColor = this.switchColor.bind(this)
   }
   componentDidMount() {
-    const obj = {}
-    for (let i = 0; i < 1000; i++) {
-      const randomKey = Math.floor(Math.random() * Object.keys(colors).length)
-      const randomColor = Object.keys(colors)[randomKey]
-      obj[randomColor] = (obj[randomColor] || 0) + 1
-    }
-    console.log(obj)
-    const randomKey = Math.floor(Math.random() * Object.keys(colors).length)
-    const randomColor = Object.keys(colors)[randomKey]
+    let randomColor = this.random(financials)
     this.setState({
       data: financials,
       fills: colors[randomColor],
       color: randomColor,
       height: 50
     })
+  }
+  random(obj) {
+    const randomKey = Math.floor(Math.random() * Object.keys(colors).length)
+    return Object.keys(colors)[randomKey]
   }
   switchColor(newColor) {
     this.setState({

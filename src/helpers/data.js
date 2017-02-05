@@ -9,19 +9,19 @@ export const financials = [
     good: 300,
     average: 225,
     poor: 150,
-    stops: 6,
+    steps: 7,
     percentage: false
   },
   {
     id: 1,
     title: 'Profit',
     subtitle: '%',
-    target: 27,
+    target: 26.5,
     actual: 22.5,
     good: 30,
     average: 25,
     poor: 20,
-    stops: 6,
+    steps: 7,
     percentage: true
   },
   {
@@ -33,31 +33,31 @@ export const financials = [
     good: 600,
     average: 500,
     poor: 350,
-    stops: 6,
+    steps: 7,
     percentage: false
   },
   {
     id: 3,
     title: 'New Customers',
     subtitle: 'Count',
-    target: 2100,
-    actual: 1750,
+    target: 2050,
+    actual: 1700,
     good: 2500,
     average: 2000,
     poor: 1400,
-    stops: 6,
+    steps: 6,
     percentage: false
   },
   {
     id: 4,
     title: 'Cust. Satisfaction',
     subtitle: 'Top Rating of 5',
-    target: 4.2,
-    actual: 3.5,
+    target: 4.35,
+    actual: 4.5,
     good: 5,
-    average: 4,
-    poor: 3,
-    stops: 6,
+    average: 4.25,
+    poor: 3.3,
+    steps: 6,
     percentage: false
   }
 ]

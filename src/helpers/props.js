@@ -1,33 +1,40 @@
 
-import { getBarWidth } from './utils'
+import { getBarWidth, getBarHeight, getX, getY } from './utils'
 
-export const quartileProps = (width, max, fill) => {
+export const quartileProps = (width, maxWidth, maxHeight, fill) => {
   return {
     x: 0,
     y: 0,
-    width: getBarWidth(width, max),
-    height: '100%',
+    width: getBarWidth(width, maxWidth),
+    height: getBarHeight(maxHeight, 1),
     fill
   }
 }
 
-export const actualValueProps = (width, max, height, fill) => {
+export const actualValueProps = (width, maxWidth, maxHeight, fill) => {
+  const barHeight = getBarHeight(maxHeight, 0.25)
   return {
     x: 0,
-    y: (height - (height / 4)) / 2,
-    width: getBarWidth(width, max),
-    height: height / 4,
+    y: getY(barHeight, maxHeight),
+    width: getBarWidth(width, maxWidth),
+    height: barHeight,
     fill
   }
 }
 
-export const targetValueProps = (width, max, height, fill) => {
-  const targetHeight = height * .7
+export const targetValueProps = (width, maxWidth, maxHeight, fill) => {
+  const barHeight = getBarHeight(maxHeight, 0.7)
   return {
-    x: getBarWidth(width, max),
-    y: (height - targetHeight) / 2,
+    x: getX(width, maxWidth),
+    y: getY(barHeight, maxHeight),
     width: 5,
-    height: targetHeight,
+    height: barHeight,
     fill
+  }
+}
+
+export const tickProps = (x, y, height) => {
+  return {
+    
   }
 }
