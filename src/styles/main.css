@@ -39,7 +39,6 @@
 
 /* -------  bullet  ------- */
 .bullet {
-  height:100%;
   display:flex;
   justify-content:space-between;
 }
@@ -67,16 +66,18 @@
   flex-basis:84%;
   padding:0 2%;
 }
+
 /* -------  graph  ------- */
 .graph {
   overflow:visible;
 }
 
 
-/* -------  graph bar  ------- */
+/* -------  bar  ------- */
 .bar {
   transition:fill 0.44s;
 }
+
 
 /* -------  color menu  ------- */
 .colorMenu {
@@ -86,16 +87,20 @@
   align-items:center;
   justify-content:center;
 }
+
 /* -------  color list  ------- */
 .colorList {
   display:flex;
 }
+
 /* -------  color item  ------- */
 .colorItem {
   padding:0 2em;
   cursor:pointer;
   transition:color 0.44s;
 }
+
+/* -------  color item - not last child  ------- */
 .colorItem:not(:last-child) {
   border-right:1px solid #070707;
 }
