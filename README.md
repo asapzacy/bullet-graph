@@ -12,4 +12,4 @@ npm install
 npm run start
 ```
 
-then --> [http://localhost:3000](localhost:3000)
+then --> [localhost:3000](http://localhost:3000)
