@@ -1,6 +1,7 @@
 
-import { getBarWidth, getBarHeight, getX, getY } from './utils'
+import { getBarWidth, getBarHeight, getXPosition, getYPosition } from './utils'
 
+//  return props object for quartile <Bar />'s  --> [good, average, poor]
 export const quartileProps = (width, maxWidth, maxHeight, fill) => {
   return {
     x: 0,
@@ -11,39 +12,51 @@ export const quartileProps = (width, maxWidth, maxHeight, fill) => {
   }
 }
 
+//  return props object for actual <Bar />  --> [actual]
 export const actualValueProps = (width, maxWidth, maxHeight, fill) => {
   const barHeight = getBarHeight(maxHeight, 0.25)
   return {
     x: 0,
-    y: getY(barHeight, maxHeight),
+    y: getYPosition(barHeight, maxHeight),
     width: getBarWidth(width, maxWidth),
     height: barHeight,
     fill
   }
 }
 
+//  return props object for target <Bar />  --> [target]
 export const targetValueProps = (width, maxWidth, maxHeight, fill) => {
   const barHeight = getBarHeight(maxHeight, 0.7)
   return {
-    x: getX(width, maxWidth),
-    y: getY(barHeight, maxHeight),
+    x: getXPosition(width, maxWidth),
+    y: getYPosition(barHeight, maxHeight),
     width: 5,
     height: barHeight,
     fill
   }
 }
 
-export const tickProps = (width, height, index, step, last, percentage) => {
-  const x = getX(step, width)
+//  return props object for axis interval <Line />  --> [step]
+export const lineProps = (width, height, step) => {
+  const xPosition = getXPosition(step, width)
   return {
-    x1: x,
+    x: xPosition,
     y1: height,
-    x2: x,
+    x2: xPosition,
     y2: height + 15,
-    x3: x,
-    y3: height + 35,
+    strokeWidth: 2,
+    stroke: 'black'
+  }
+}
+
+//  return props object for axis interval <Text />  --> [step]
+export const textProps = (width, height, step, percentage) => {
+  const xPosition = getXPosition(step, width)
+  return {
+    x: xPosition,
+    y: height + 35,
     text: step.toLocaleString(),
-    position: 'middle',
+    textAnchor: 'middle',
     percentage
   }
 }

@@ -1,18 +1,21 @@
 import React from 'react'
-import Tick from './Tick'
-import { tickProps } from '../helpers/props'
+import Interval from './Interval'
+import { intervalProps } from '../helpers/props'
 
 export default function Axis({ height, width, steps, percentage }) {
-  const arr = []
-  const division = width / (steps - 1)
-  let i = 0
-  while (i <= width) {
-    arr.push(i)
-    i += division
+  const intervals = () => {
+    const arr = []
+    const interval = width / (steps - 1)
+    let i = 0
+    while (i <= width) {
+      arr.push(i)
+      i += interval
+    }
+    return arr
   }
   return (
     <g>
-      { arr.map((item, index) => <Tick {...tickProps(width, height, index, item, arr.length - 1, percentage)} key={index} />) }
+      { intervals().map((item, index) => <Interval width={width} height={height} percentage={percentage} step={item} key={index} />) }
     </g>
   )
 }

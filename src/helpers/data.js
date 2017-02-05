@@ -1,4 +1,5 @@
 
+//  mock financial data   -->   https://en.wikipedia.org/wiki/Bullet_graph
 export const financials = [
   {
     id: 0,

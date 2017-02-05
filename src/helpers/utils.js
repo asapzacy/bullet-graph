@@ -1,8 +1,8 @@
 
-
-
-export const getBarWidth = (width, fullWidth) => `${(width / fullWidth) * 100}%`
+//  get bar width + height --> <Bar /> component
+export const getBarWidth = (width, fullWidth) => (width / fullWidth) === 0 ? 0 : `${(width / fullWidth) * 100}%`
 export const getBarHeight = (height, fullHeight) => fullHeight * height
 
-export const getX = (barWidth, fullWidth) => `${(barWidth / fullWidth) * 100}%`
-export const getY = (barHeight, fullHeight) => (fullHeight - barHeight) / 2
+//  get X + Y position --> <Bar />, <Interval />, <Line />, <Text /> components
+export const getXPosition = (barWidth, fullWidth) => (barWidth / fullWidth) === 0 ? 0 : `${(barWidth / fullWidth) * 100}%`
+export const getYPosition = (barHeight, fullHeight) => (fullHeight - barHeight) / 2

@@ -10,6 +10,7 @@
   flex-direction:column;
 }
 
+
 /* -------  header container  ------- */
 .headerContainer {
   width:100%;
@@ -18,27 +19,31 @@
   align-items:center;
   justify-content:center;
 }
+
 /* -------  header  ------- */
 .header {
   font-family:monospace;
   font-size:3.33em;
 }
 
-/* -------  bullets list  ------- */
+
+/* -------  bullet list  ------- */
 .bulletList {
   width:100%;
   flex-basis:50%;
   display:flex;
   flex-direction:column;
   justify-content:space-around;
-
 }
 
-/* -------  bullet container  ------- */
-.bulletItem {
+
+/* -------  bullet  ------- */
+.bullet {
+  height:100%;
   display:flex;
   justify-content:space-between;
 }
+
 
 /* -------  title container  ------- */
 .titleContainer {
@@ -46,22 +51,28 @@
   min-width:160px;
   text-align:right;
 }
+/* -------  title  ------- */
 .title {
   font-weight:600;
   font-size:1.2em;
 }
+/* -------  subtitle  ------- */
 .subtitle {
   font-size:1em;
 }
 
+
 /* -------  graph container  ------- */
 .graphContainer {
-  flex-basis:82%;
+  flex-basis:84%;
+  padding:0 2%;
 }
 /* -------  graph  ------- */
 .graph {
   overflow:visible;
 }
+
+
 /* -------  graph bar  ------- */
 .bar {
   transition:fill 0.44s;
