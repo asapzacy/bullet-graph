@@ -1,13 +1,12 @@
 # bullet-graph
 
-![bullet-graph preview](https://zac.codes/img/other/bullet-graph_preview.png)
+![bullet-graph preview](https://zac.codes/assets/img/projects/bullet-graph_preview-xlarge.jpg)
 
-A coding challenge to construct a bullet graph using React.js (no d3.js).
+A coding challenge to construct a bullet graph using React.js and native SVG (no d3.js).
 
 ## Usage
 ```
-git clone https://github.com/zacarellano/bullet-graph.git
-cd bullet-graph
+git clone https://github.com/asapzacy/bullet-graph.git && cd bullet-graph
 npm install
 npm run start
 ```
